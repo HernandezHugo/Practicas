@@ -5,8 +5,14 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+  font-size: 62.5%;
 }
+
 body {
+  font-size: 1.6rem;
+  line-height: 2;
+}
+.container {
   background-color: rgb(54, 66, 170);
   width: 100%;
   height: 100vh;
@@ -14,17 +20,30 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  perspective: 400px;
 }
+
+h1 {
+  font-size: 2.5rem;
+}
+
 .cuboid {
   --height: 100px;
   --width: 100px;
   --depth: 100px;
   height: var(--height);
   width: var(--width);
-  /* background-color: hsla(0, 0%, 100%, 0.4); */
   position: relative;
   transform: rotateX(24deg) rotateY(32deg);
+  /* transform: translateZ(-100px); */
   transform-style: preserve-3d;
+  transition: transform 1s;
+}
+.cuboid .cube_side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .cube_side {
@@ -35,14 +54,14 @@ body {
 
 .cube_side:nth-of-type(1),
 .cube_side:nth-of-type(2) {
-  --coeficient: -0.5;
+  --coeficient: 0.5;
   height: var(--height);
   width: var(--width);
   transform: translate3d(0, 0, calc(var(--depth) * var(--coeficient)));
 }
 
 .cube_side:nth-of-type(2) {
-  --coeficient: 0.5;
+  --coeficient: -0.5;
 }
 
 .cube_side:nth-of-type(3),
@@ -62,7 +81,7 @@ body {
 
 .cube_side:nth-of-type(5),
 .cube_side:nth-of-type(6) {
-  --rotation: 90deg;
+  --rotation: -90deg;
   height: var(--depth);
   width: var(--width);
   left: 50%;
@@ -72,5 +91,42 @@ body {
 }
 
 .cube_side:nth-of-type(6) {
+  --rotation: 90deg;
+}
+
+.show--front {
+  --coeficient: -0.5;
+  transform: translate3d(0, 0, calc(var(--depth) * var(--coeficient)));
+}
+.show--back {
+  --coeficient: 0.5;
+  transform: translate3d(0, 0, calc(var(--depth) * var(--coeficient)));
+}
+.show--left {
   --rotation: -90deg;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotateY(var(--rotation))
+    translate3d(0, 0, calc(var(--width) * -0.5));
+}
+.show--right {
+  --rotation: 90deg;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotateY(var(--rotation))
+    translate3d(0, 0, calc(var(--width) * -0.5));
+}
+.show--top {
+  --rotation: 90deg;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotateX(var(--rotation))
+    translate3d(0, 0, calc(var(--height) * -0.5));
+}
+.show--bottom {
+  --rotation: -90deg;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotateX(var(--rotation))
+    translate3d(0, 0, calc(var(--height) * -0.5));
 }
