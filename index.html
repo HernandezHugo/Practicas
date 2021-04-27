@@ -10,15 +10,29 @@
   <body>
     <div class="container">
       <div class="cuboid">
-        <div class="cube_side show--front"><h1>front</h1></div>
-        <div class="cube_side show--back"><h1>back</h1></div>
-        <div class="cube_side show--left"><h1>left</h1></div>
-        <div class="cube_side show--right"><h1>right</h1></div>
-        <div class="cube_side show--top"><h1>top</h1></div>
-        <div class="cube_side show--bottom"><h1>bottom</h1></div>
+        <div class="cube_side"><h1>front</h1></div>
+        <div class="cube_side"><h1>back</h1></div>
+        <div class="cube_side"><h1>left</h1></div>
+        <div class="cube_side"><h1>right</h1></div>
+        <div class="cube_side"><h1>top</h1></div>
+        <div class="cube_side"><h1>bottom</h1></div>
       </div>
     </div>
-
+    <fieldset class="radio-group">
+      <legend>Choose the cube side</legend>
+      <label>front</label>
+      <input name="side" type="radio" value="front" checked />
+      <label>back</label>
+      <input name="side" type="radio" value="back" />
+      <label>left</label>
+      <input name="side" type="radio" value="left" />
+      <label>right</label>
+      <input name="side" type="radio" value="right" />
+      <label>top</label>
+      <input name="side" type="radio" value="top" />
+      <label>bottom</label>
+      <input name="side" type="radio" value="bottom" />
+    </fieldset>
     <script src="scripts.js"></script>
   </body>
 </html>

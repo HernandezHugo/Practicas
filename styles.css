@@ -20,7 +20,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  perspective: 400px;
+  /* perspective: 400px; */
 }
 
 h1 {
@@ -34,7 +34,7 @@ h1 {
   height: var(--height);
   width: var(--width);
   position: relative;
-  transform: rotateX(24deg) rotateY(32deg);
+  /* transform: rotateX(24deg) rotateY(32deg); */
   /* transform: translateZ(-100px); */
   transform-style: preserve-3d;
   transition: transform 1s;
@@ -104,29 +104,26 @@ h1 {
 }
 .show--left {
   --rotation: -90deg;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) rotateY(var(--rotation))
+  transform: rotateY(var(--rotation))
     translate3d(0, 0, calc(var(--width) * -0.5));
 }
 .show--right {
   --rotation: 90deg;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) rotateY(var(--rotation))
+  transform: rotateY(var(--rotation))
     translate3d(0, 0, calc(var(--width) * -0.5));
 }
 .show--top {
   --rotation: 90deg;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) rotateX(var(--rotation))
+  transform: rotateX(var(--rotation))
     translate3d(0, 0, calc(var(--height) * -0.5));
 }
 .show--bottom {
   --rotation: -90deg;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) rotateX(var(--rotation))
+  transform: rotateX(var(--rotation))
     translate3d(0, 0, calc(var(--height) * -0.5));
+}
+
+legend,
+label {
+  font-size: 2rem;
 }
