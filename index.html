@@ -8,31 +8,34 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="container">
-      <div class="cuboid">
-        <div class="cube_side"></div>
-        <div class="cube_side"></div>
-        <div class="cube_side"></div>
-        <div class="cube_side"></div>
-        <div class="cube_side"></div>
-        <div class="cube_side"></div>
+    <main class="container">
+      <div class="background__cube">
+        <div class="cuboid">
+          <div class="cube__side"></div>
+          <div class="cube__side"></div>
+          <div class="cube__side"></div>
+          <div class="cube__side"></div>
+          <div class="cube__side"></div>
+          <div class="cube__side"></div>
+        </div>
       </div>
-    </div>
-    <fieldset class="radio-group">
-      <legend>Choose the cube side</legend>
-      <label>front</label>
-      <input name="side" type="radio" value="front" checked />
-      <label>back</label>
-      <input name="side" type="radio" value="back" />
-      <label>left</label>
-      <input name="side" type="radio" value="left" />
-      <label>right</label>
-      <input name="side" type="radio" value="right" />
-      <label>top</label>
-      <input name="side" type="radio" value="top" />
-      <label>bottom</label>
-      <input name="side" type="radio" value="bottom" />
-    </fieldset>
+      <fieldset class="radio--group">
+        <p>Choose side</p>
+        <input name="side" type="radio" value="front" checked />
+        <label>front</label>
+        <input name="side" type="radio" value="back" />
+        <label>back</label>
+        <input name="side" type="radio" value="left" />
+        <label>left</label>
+        <input name="side" type="radio" value="right" />
+        <label>right</label>
+        <input name="side" type="radio" value="top" />
+        <label>top</label>
+        <input name="side" type="radio" value="bottom" />
+        <label>bottom</label>
+      </fieldset>
+    </main>
+
     <script src="scripts.js"></script>
   </body>
 </html>
