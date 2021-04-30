@@ -10,29 +10,26 @@ const screenSizeHeight = document.querySelector('.height');
 const screenSizeWidth = document.querySelector('.width');
 const screenSizeDepth = document.querySelector('.depth');
 
-radioGroup.addEventListener('change', showCubeSide => {
-    var checkedRadio = radioGroup.querySelector(':checked');
+radioGroup.addEventListener('change', () => {
+    let checkedRadio = radioGroup.querySelector(':checked');
     cube.className = 'cuboid show--' + checkedRadio.value;
 });
 
 
-numberHeight.addEventListener('change', showSizes => {
-
-    var newSize = screenSizeHeight.innerText = numberHeight.value + 'px';
+numberHeight.addEventListener('change', () => {
+    let newSize = screenSizeHeight.innerText = numberHeight.value + 'px';
     cubeSides.forEach(cubeSide => {
         cubeSide.style.setProperty('--height', `${newSize}`);
     });
 });
-numberWidth.addEventListener('change', showSizes => {
-
-    var newSize = screenSizeWidth.innerText = numberWidth.value + 'px';
+numberWidth.addEventListener('change', () => {
+    let newSize = screenSizeWidth.innerText = numberWidth.value + 'px';
     cubeSides.forEach(cubeSide => {
         cubeSide.style.setProperty('--width', `${newSize}`);
     });
 });
-numberDepth.addEventListener('change', showSizes => {
-
-    var newSize = screenSizeDepth.innerText = numberDepth.value + 'px';
+numberDepth.addEventListener('change', () => {
+    let newSize = screenSizeDepth.innerText = numberDepth.value + 'px';
     cubeSides.forEach(cubeSide => {
         cubeSide.style.setProperty('--depth', `${newSize}`);
     });
