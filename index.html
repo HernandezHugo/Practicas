@@ -19,21 +19,41 @@
           <div class="cube__side"></div>
         </div>
       </div>
-      <fieldset class="radio--group">
-        <p>Choose side</p>
-        <input name="side" type="radio" value="front" checked />
-        <label>front</label>
-        <input name="side" type="radio" value="back" />
-        <label>back</label>
-        <input name="side" type="radio" value="left" />
-        <label>left</label>
-        <input name="side" type="radio" value="right" />
-        <label>right</label>
-        <input name="side" type="radio" value="top" />
-        <label>top</label>
-        <input name="side" type="radio" value="bottom" />
-        <label>bottom</label>
-      </fieldset>
+      <div class="config">
+        <fieldset class="radio--group">
+          <p class="title--radio">Choose side</p>
+          <input name="side" type="radio" value="front" checked />
+          <label>front</label>
+          <input name="side" type="radio" value="back" />
+          <label>back</label>
+          <input name="side" type="radio" value="left" />
+          <label>left</label>
+          <input name="side" type="radio" value="right" />
+          <label>right</label>
+          <input name="side" type="radio" value="top" />
+          <label>top</label>
+          <input name="side" type="radio" value="bottom" />
+          <label>bottom</label>
+        </fieldset>
+        <fieldset class="number--group">
+          <p class="title--number">Select sizes</p>
+          <div class="division">
+            <label>height:</label>
+            <input name="height" type="range" min="50" max="400" value="100" />
+            <p class="size height">100px</p>
+          </div>
+          <div class="division">
+            <label>width:</label>
+            <input name="width" type="range" min="50" max="400" value="100" />
+            <p class="size width">100px</p>
+          </div>
+          <div class="division">
+            <label>depth:</label>
+            <input name="depth" type="range" min="50" max="400" value="100" />
+            <p class="size depth">100px</p>
+          </div>
+        </fieldset>
+      </div>
     </main>
 
     <script src="scripts.js"></script>
