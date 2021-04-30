@@ -19,11 +19,9 @@ radioGroup.addEventListener('change', showCubeSide => {
 numberHeight.addEventListener('change', showSizes => {
 
     var newSize = screenSizeHeight.innerText = numberHeight.value + 'px';
-    console.log(numberHeight.value);
     cubeSides.forEach(cubeSide => {
         cubeSide.style.setProperty('--height', `${newSize}`);
     });
-
 });
 numberWidth.addEventListener('change', showSizes => {
 
@@ -31,8 +29,6 @@ numberWidth.addEventListener('change', showSizes => {
     cubeSides.forEach(cubeSide => {
         cubeSide.style.setProperty('--width', `${newSize}`);
     });
-    console.log(numberWidth.value);
-
 });
 numberDepth.addEventListener('change', showSizes => {
 
@@ -40,6 +36,4 @@ numberDepth.addEventListener('change', showSizes => {
     cubeSides.forEach(cubeSide => {
         cubeSide.style.setProperty('--depth', `${newSize}`);
     });
-    console.log(numberDepth.value);
-
 });
