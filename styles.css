@@ -168,10 +168,10 @@ label {
   width: 300px;
   height: 350px;
 }
-.radio--group {
-  display: grid;
-  grid-template-columns: 30px auto;
-  align-items: center;
+
+label {
+  display: flex;
+  align-items: baseline;
 }
 
 .number--group {
