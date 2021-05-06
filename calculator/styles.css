@@ -1,0 +1,83 @@
+:root {
+  --color1: #0064fab0;
+  --color2: #00aa63b0;
+  --white: white;
+  --darkButton: #ffffffa8;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to top right, var(--color1), var(--color2));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  border-style: none;
+  font-size: 2rem;
+}
+
+/* main */
+
+.calculator {
+  display: flex;
+  gap: 3px;
+  flex-direction: column;
+  width: 250px;
+  height: 400px;
+}
+
+.calculator p {
+  text-align: end;
+}
+
+/* screen */
+
+.screen {
+  background-color: var(--white);
+}
+
+p {
+  margin: 1rem 1.5rem;
+}
+
+.screen--secundary {
+  font-size: 1.2rem;
+}
+.screen--principal {
+  font-size: 2.4rem;
+}
+
+/* buttons */
+
+.buttons {
+  display: grid;
+  gap: 3px;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  height: 100%;
+}
+
+.ce {
+  grid-column: 1/3;
+}
+
+.clean {
+  grid-column: 3/5;
+}
+
+button:hover {
+  background-color: var(--darkButton);
+}
