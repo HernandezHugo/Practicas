@@ -46,11 +46,14 @@ button {
 /* screen */
 
 .screen {
+  height: 90px;
   background-color: var(--white);
 }
 
 p {
   margin: 1rem 1.5rem;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .screen--secundary {
@@ -61,7 +64,9 @@ p {
 }
 
 /* buttons */
-
+button {
+  cursor: pointer;
+}
 .buttons {
   display: grid;
   gap: 3px;
@@ -70,11 +75,7 @@ p {
   height: 100%;
 }
 
-.ce {
-  grid-column: 1/3;
-}
-
-.clean {
+.equal {
   grid-column: 3/5;
 }
 
