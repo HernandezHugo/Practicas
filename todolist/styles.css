@@ -1,5 +1,76 @@
 :root {
   --green: #00c50a;
   --red: #b30000;
+  --blue: #02c2c9;
   --backgroundColor: #110f0fa8;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font-size: 62.5%;
+}
+
+/*Utilities*/
+
+p {
+  font-size: 1.6rem;
+  width: 50rem;
+}
+
+.btn {
+  font-size: 1.6rem;
+  color: white;
+  border: 3px solid white;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.add {
+  background-color: var(--blue);
+}
+
+.completed {
+  background-color: var(--green);
+}
+
+.delete {
+  background-color: var(--red);
+}
+
+/* Form */
+
+fieldset {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+legend {
+  font-size: 1.6rem;
+}
+
+.task {
+  font-size: 1.6rem;
+  width: 50rem;
+}
+
+/* List */
+
+li {
+  list-style: none;
+}
+
+.task__listed {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
