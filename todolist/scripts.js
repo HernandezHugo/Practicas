@@ -12,6 +12,14 @@ function addButtons(task) {
     deleteBtn.classList.add('btn', 'delete');
     deleteBtn.innerText = '✗';
 
+    completedBtn.addEventListener('click', () => {
+        task.classList.toggle('task__completed');
+    })
+
+    deleteBtn.addEventListener('click', () => {
+        task.remove();
+    })
+
     task.appendChild(completedBtn);
     task.appendChild(deleteBtn);
 }
@@ -34,11 +42,3 @@ addBtn.addEventListener('click', () => {
     if (task.value === '') return;
     addTasks();
 });
-
-// completedBtn.addEventListener('click', () => {
-
-// })
-
-// deleteBtn.addEventListener('click', () => {
-
-// })
