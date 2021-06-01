@@ -57,10 +57,6 @@ fieldset {
   justify-content: flex-start;
 }
 
-legend {
-  font-size: 1.6rem;
-}
-
 .task {
   font-size: 1.6rem;
   width: 50rem;
