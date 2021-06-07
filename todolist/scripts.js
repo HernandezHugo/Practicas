@@ -5,11 +5,11 @@ const addBtn = document.querySelector('.add')
 
 function addButtons(task) {
     const completedBtn = document.createElement('BUTTON');
-    completedBtn.classList.add('btn', 'completed');
+    completedBtn.classList.add('btn', 'completed', 'border');
     completedBtn.innerText = '✓';
 
     const deleteBtn = document.createElement('BUTTON');
-    deleteBtn.classList.add('btn', 'delete');
+    deleteBtn.classList.add('btn', 'delete', 'border');
     deleteBtn.innerText = '✗';
 
     completedBtn.addEventListener('click', () => {
@@ -26,7 +26,7 @@ function addButtons(task) {
 
 function addTasks() {
     let newTask = document.createElement('LI');
-    newTask.classList.add('task__listed');
+    newTask.classList.add('task__listed', 'border', 'shadow');
 
     let taskContent = document.createElement('P');
     taskContent.innerText = task.value.trim();

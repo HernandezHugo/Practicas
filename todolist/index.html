@@ -7,15 +7,19 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body class="flex--center__column">
     <form>
-      <fieldset>
-        <legend>¿Qué quieres añadir a la lista?</legend>
-        <input class="task" type="text" placeholder="Nueva Tarea" />
-        <input class="btn add" type="button" value="+" />
+      <fieldset class="flex--center border shadow">
+        <input
+          class="task"
+          type="text"
+          placeholder="Nueva Tarea"
+          maxlength="60"
+        />
+        <input class="btn add border" type="button" value="+" />
       </fieldset>
     </form>
-    <ul class="list">
+    <ul class="list flex--center__column">
       <!-- Tasks -->
     </ul>
     <script src="scripts.js"></script>
