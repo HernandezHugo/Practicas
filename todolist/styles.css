@@ -1,9 +1,12 @@
 :root {
   --green: #00c50a;
+  --hoverGreen: #009407;
   --red: #b30000;
+  --hoverRed: #960000;
   --blue: #02c2c9;
-  --grey: #b1b1b1;
-  --backgroundColor: #110f0fa8;
+  --hoverBlue: #009297;
+  --completed: #b1b1b1;
+  --backgroundColor: linear-gradient(0deg, #00416d, #00a5ce);
 }
 
 html {
@@ -17,7 +20,10 @@ html {
   font-size: 62.5%;
 }
 
-/*Utilities*/
+body {
+  background-image: var(--backgroundColor);
+  height: 100vh;
+}
 
 p {
   font-size: 1.6rem;
@@ -25,12 +31,34 @@ p {
   font-weight: 400;
 }
 
+.flex--center,
+.flex--center__column,
+.task__listed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex--center__column {
+  flex-direction: column;
+}
+
+.border {
+  border: 1px solid white;
+}
+
+.shadow {
+  box-shadow: 4px 6px 11px -4px black;
+}
+
+/* Buttons */
+
 .btn {
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: white;
-  border: 2px solid white;
   border-radius: 5px;
-  margin-right: 2rem;
+  height: 4rem;
+  width: 4rem;
 }
 
 .btn:hover {
@@ -41,45 +69,73 @@ p {
   background-color: var(--blue);
 }
 
+.add:hover {
+  background-color: var(--hoverBlue);
+}
+
 .completed {
   background-color: var(--green);
+}
+
+.completed:hover {
+  background-color: var(--hoverGreen);
 }
 
 .delete {
   background-color: var(--red);
 }
 
+.delete:hover {
+  background-color: var(--hoverRed);
+}
+
 /* Form */
 
 fieldset {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  background-color: #019b86;
+  padding: 4rem;
+  border-radius: 60px;
+  gap: 2rem;
 }
 
 .task {
+  height: 5rem;
   font-size: 1.6rem;
-  width: 50rem;
+  width: 65rem;
+  padding-left: 1rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.task:focus {
+  outline: none;
+  border: 2px solid #3ea2ff;
+  border-radius: 10px;
 }
 
 /* List */
+.list {
+  margin-top: 3rem;
+  gap: 2rem;
+}
 
 li {
   list-style: none;
 }
 
 .task__listed {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  gap: 2rem;
+  background-color: #009e69;
+  padding: 0 2rem;
+  border-radius: 10px;
 }
 
 .task__completed {
-  background-color: var(--grey);
-  padding-left: 3rem;
+  background-color: var(--completed);
 }
 
 .task__completed p {
+  padding-left: 3rem;
   font-style: italic;
   font-weight: 200;
 }
