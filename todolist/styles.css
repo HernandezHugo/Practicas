@@ -31,6 +31,16 @@ p {
   font-weight: 400;
 }
 
+li {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+  max-height: 55rem;
+  overflow: auto;
+}
+
 .flex--center,
 .flex--center__column,
 .task__listed {
@@ -91,6 +101,10 @@ p {
 
 /* Form */
 
+body div {
+  max-height: 60rem;
+}
+
 fieldset {
   background-color: #019b86;
   padding: 4rem;
@@ -119,23 +133,54 @@ fieldset {
   gap: 2rem;
 }
 
-li {
-  list-style: none;
-}
-
 .task__listed {
   gap: 2rem;
   background-color: #009e69;
   padding: 0 2rem;
   border-radius: 10px;
+  animation-name: adding-element;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
 }
 
 .task__completed {
   background-color: var(--completed);
 }
 
+.deleting {
+  animation-name: deleting-element;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
 .task__completed p {
   padding-left: 3rem;
   font-style: italic;
   font-weight: 200;
+}
+
+/* Keyframes */
+
+@keyframes adding-element {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes deleting-element {
+  0% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
 }
