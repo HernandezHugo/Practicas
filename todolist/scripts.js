@@ -1,7 +1,7 @@
 const task = document.querySelector('.task');
 const list = document.querySelector('.list');
 
-const addBtn = document.querySelector('.add')
+const addBtn = document.querySelector('.add');
 
 function addButtons(task) {
     const completedBtn = document.createElement('BUTTON');
@@ -17,7 +17,10 @@ function addButtons(task) {
     })
 
     deleteBtn.addEventListener('click', () => {
-        task.remove();
+        task.classList.add('deleting');
+        setTimeout(() => {
+            task.remove();
+        }, 500);
     })
 
     task.appendChild(completedBtn);
@@ -35,7 +38,7 @@ function addTasks() {
     addButtons(newTask);
     list.appendChild(newTask);
 
-    task.value = ''
+    task.value = '';
 }
 
 addBtn.addEventListener('click', () => {
